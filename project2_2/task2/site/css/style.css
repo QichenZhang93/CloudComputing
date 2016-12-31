@@ -1,0 +1,72 @@
+/* TODO this is really raggedy.  Needs cleaning up */
+body: {
+    width: 100%;
+}
+
+div#content {
+    width: 100%;
+}
+
+div#source-pane {
+    float: left;
+    width: 50%;
+}
+
+div#source-title {
+    margin: 10px 50px;
+}
+
+div#source-form {
+    height: 66vh;
+    width: 90%;
+    margin: 10px auto;
+    margin-bottom: 30px;
+}
+div#source-form > form {
+    height: 100%;
+    width: 100%;
+}
+div#source-form > form > button {
+    margin: auto;
+}
+div#source {
+    width: 90%;
+    height: 90%;
+    margin: 20px auto;
+}
+div#source > textarea {
+    width: 100%;
+    height: 100%;
+}
+.CodeMirror {
+    border: 1px solid black;
+}
+div#submit {
+    width: 0px;
+    margin: auto;
+}
+div#output-title {
+    margin: 10px 50px;
+}
+
+div#output-pane {
+    float: right;
+    width: 50%;
+}
+
+div#output-container {
+    width: 90%;
+    margin: 10px auto;
+    margin-bottom: 30px;
+    /*padding: 10px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;*/
+}
+
+#output {
+    color: black;
+    font-family: monospace;
+    width: 100%;
+    height: 50vh;
+}

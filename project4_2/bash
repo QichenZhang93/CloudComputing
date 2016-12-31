@@ -1,0 +1,32 @@
+mkdir /mnt/cc
+cd /mnt/cc
+
+# scala maven
+wget https://s3.amazonaws.com/15-319-f16/ScalaSparkMavenTemplate.tgz
+mkdir scalaMaven
+mv ScalaSparkMavenTemplate.tgz ./scalaMaven
+cd ./scalaMaven
+tar -xf ScalaSparkMavenTemplate.tgz
+cd ../
+
+# task 1 submitter
+wget https://s3.amazonaws.com/15-319-f16/task1-submitter.tgz
+mkdir t1submit
+mv task1-submitter.tgz ./t1submit
+cd ./t1submit
+tar -xf task1-submitter.tgz
+cd ../
+
+wget http://s3.amazonaws.com/cmucc-datasets/TwitterGraph.txt
+hadoop fs -put TwitterGraph.txt /
+
+# scala task1 -> count vertex & edges
+spark-shell
+> val txt = sc.textFile("hdfs:///TwitterGraph.txt")
+> txt.map(id => (id, 0)).reduceByKey((a, b) => (a + b)).count() // count edge
+> txt.flatMap(line => line.split("\t")).map(id => (id , 0)).reduceByKey((a, b) => (a + b)).count() // count vertex
+
+# scala task1 -> count of followers
+spark-shell
+> val txt = sc.textFile("hdfs:///TwitterGraph.txt")
+> txt.distinct().map(l => (l.split("\t")(1), 1)).reduceByKey(_+_).map{case(k,v) => s"$k\t$v"}.saveAsTextFile("hdfs:///follower-output")

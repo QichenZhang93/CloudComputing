@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Playground</title>
+
+  <link rel="stylesheet" type="text/css" href="css/codemirror.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script src="js/codemirror.js"></script>
+  <script src="js/syntax/python.js"></script>
+  <script src="js/syntax/perl.js"></script>
+  <script src="js/syntax/ruby.js"></script>
+  <script src="js/syntax/lua.js"></script>
+
+  <script src="js/init.js"></script>
+</head>
+
+<body>
+  <div id="content">
+    <h1>Playground</h1>
+    <h2>a place to play with code</h2>
+
+    <div id="source-pane">
+      <div id="source-title">Code</div>
+      <div id="source-form-container">
+        <form method="POST" action="" id="source-form">
+          <label for="source-select">Select language</label>
+          <select id="source-select" name="lang">
+            <option value="python">Python</option>
+            <option value="perl">Perl</option>
+            <option value="ruby">Ruby</option>
+            <option value="lua">Lua</option>
+          </select>
+          <div id="source">
+            <textarea name="prog" id="code"></textarea>
+          </div>
+          <div id="submit">
+            <button type=submit>Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="output-pane">
+      <div id="output-title">Output</div>
+      <div id="output-container">
+        <textarea disabled id="output"></textarea>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+

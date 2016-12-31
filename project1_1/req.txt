@@ -1,0 +1,51 @@
+0. Each line 4 columns:
+domain_code page_title count_views total_response_size
+
+domain_code:
+    language_id.sub_project(in abbreviation)
+
+our focus:
+    en(.wikipedia.org)
+    en.m (.m for mobile)
+
+Req:
+1. exclude dirty data (lines not having 4 columns)
+2. include en and en.m domain_code. case sensitive
+3. include only Main/Article namespace(without reserved word and colon in title), index 0
+    3.1 separate code for parsing JSON file. (simple json/gson in Java)
+        extract attribute '*', not 'canonical'
+        ' ' will be replaced by '_'
+        return a regular expression
+        the code for parsing should generate prefix blacklist
+4. careful about Normalized url should be taken into consideration (additional part of 3)
+5. exclude those that start with lowercase english char
+6. exclude (case insensitive)
+    .png 
+    .gif 
+    .jpg 
+    .jpeg
+    .tiff   
+    .tif   
+    .xcf   
+    .mid   
+    .ogg   
+    .ogv   
+    .svg   
+    .djvu  
+    .oga  
+    .flac 
+    .opus
+    .wav
+    .webm   
+    .ico   
+    .txt
+7. exclude (case sensitive)
+    404_error/
+    Main_Page
+    Hypertext_Transfer_Protocol
+    Search
+8. output: page_title[\t]count_views ([\t] is a tab)
+    sum the accesses of the same page_title from desktop and mobile sites into one
+    sort output into descending numerical order of num of accesses
+    break ties by ascending lexicographical order
+9. newline handling (on linux newline is '\n') 

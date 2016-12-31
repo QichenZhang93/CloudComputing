@@ -1,0 +1,7 @@
+scp -i 15619team.pem install_java_mysql_db.sh ./setup.sql  loadData.sh loadData_q4.sh creatIndex.sql creatIndex_q4.sql  ./runMysql.sh ubuntu@ec2-52-201-217-78.compute-1.amazonaws.com:
+scp -i 15619team.pem install_java_mysql_db.sh ./setup.sql  loadData.sh loadData_q4.sh creatIndex.sql creatIndex_q4.sql  ./runMysql.sh ubuntu@ec2-54-175-75-173.compute-1.amazonaws.com:
+scp -i 15619team.pem install_java_mysql_db.sh ./setup.sql  loadData.sh loadData_q4.sh creatIndex.sql creatIndex_q4.sql  ./runMysql.sh ubuntu@ec2-54-173-247-175.compute-1.amazonaws.com:
+scp -i 15619team.pem install_java_mysql_db.sh ./setup.sql  loadData.sh loadData_q4.sh creatIndex.sql creatIndex_q4.sql  ./runMysql.sh ubuntu@ec2-52-91-35-157.compute-1.amazonaws.com:
+scp -i 15619team.pem install_java_mysql_db.sh ./setup.sql  loadData.sh loadData_q4.sh creatIndex.sql creatIndex_q4.sql  ./runMysql.sh ubuntu@ec2-54-84-180-124.compute-1.amazonaws.com:
+scp -i 15619team.pem install_java_mysql_db.sh ./setup.sql  loadData.sh loadData_q4.sh creatIndex.sql creatIndex_q4.sql  ./runMysql.sh ubuntu@ec2-54-144-179-168.compute-1.amazonaws.com:
+scp -i 15619team.pem install_java_mysql_db.sh ./setup.sql  loadData.sh loadData_q4.sh creatIndex.sql creatIndex_q4.sql  ./runMysql.sh ubuntu@ec2-54-145-162-163.compute-1.amazonaws.com:

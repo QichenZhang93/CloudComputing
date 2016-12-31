@@ -1,0 +1,19 @@
+{  
+    "referenceGuide" : "Cite all the reference sources in the required format. Proper citations will help you avoid unnecessary trouble. Read JSON grammar from Internet if needed.",
+    "myAndrewId":"<andrewId>",    
+    "websites":[  
+        {  
+            "title":"<title of the page>",
+            "url":"<url>",
+            "code":"<in which code you use the snippet or the idea>",
+            "description":"<additional information you find it necessary to provide>"
+        }
+    ],
+    "collaborators":[  
+        {  
+            "andrewId":"<collaborator andrewId>",
+            "collaborationType":"<I helped X, X helped me, or we helped each other>",
+            "description":"<describe the idea you shared>"
+        }
+    ]
+}
